@@ -1,6 +1,6 @@
 *{
     font-size:1.8vw;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif;
     margin:0;
     padding:0;
     border:0;
@@ -14,11 +14,11 @@ body{
     padding-top:5%;
 }
 
-#input{
+#inputBlock{
     margin:1.5%;
 }
 
-#input input{
+#inputBlock input{
     border:1px solid black;
     width:20%;
 }
@@ -29,6 +29,22 @@ button{
     border:1px solid black;
     width:20%;
     margin:0 0 5%;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.1s;
+    
+}
+
+button:hover {
+    background-color: #cacaca;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 table{
@@ -38,11 +54,11 @@ table{
 }
 
 input[type=number]{
-    -moz-appearance: textfield;
+    -moz-appearance:textfield;
 }
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin:0;
 }
