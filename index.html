@@ -29,38 +29,38 @@
     <p id="demo"></p>
     <script>
         let secretNumber = generateNumber();
-        function generateNumber() {
-            let digits = [];
-            while(digits.length < 4) {
-                let digit = Math.floor(Math.random() * 10);
-                if(!digits.includes(digit)) digits.push(digit);
+        function generateNumber(){
+            let digits=[];
+            while(digits.length<4){
+                let digit=Math.floor(Math.random()*10);
+                if(!digits.includes(digit))digits.push(digit);
             }
             return digits.join('');
         }
-        function countBullsAndCows(guess) {
-            let bulls = 0, cows = 0;
-            for(let i = 0; i < 4; i++) {
-                if(guess[i] === secretNumber[i]) bulls++;
-                else if(secretNumber.includes(guess[i])) cows++;
+        function countBullsAndCows(guess){
+            let bulls=0,cows=0;
+            for(let i=0;i<4;i++){
+                if(guess[i]===secretNumber[i])bulls++;
+                else if(secretNumber.includes(guess[i]))cows++;
             }
-            return { bulls, cows };
+            return {bulls,cows};
         }
         function myFunction(){
-            let input = document.getElementById("input").value;
-            if (input.length !== 4 || !/^\d{4}$/.test(input) || new Set(input).size !== 4) {
+            let input=document.getElementById("input").value;
+            if (input.length !==4||!/^\d{4}$/.test(input)||new Set(input).size!==4){
                 alert("Пожалуйста, введите 4 уникальные цифры");
                 return;
             }
-            let result = countBullsAndCows(input);
-            let tableBody = document.querySelector("#history tbody");
-            let newRow = tableBody.insertRow(0);
-            newRow.insertCell(0).textContent = input;
-            newRow.insertCell(1).textContent = result.bulls;
-            newRow.insertCell(2).textContent = result.cows;
-            if(result.bulls === 4) {
+            let result=countBullsAndCows(input);
+            let tableBody=document.querySelector("#history tbody");
+            let newRow=tableBody.insertRow(0);
+            newRow.insertCell(0).textContent=input;
+            newRow.insertCell(1).textContent=result.bulls;
+            newRow.insertCell(2).textContent=result.cows;
+            if(result.bulls===4){
                 alert("Поздравляем! Вы угадали число!");
                 secretNumber = generateNumber();
-                tableBody.innerHTML = "";
+                tableBody.innerHTML="";
             }
             document.getElementById("input").value="";
         }
