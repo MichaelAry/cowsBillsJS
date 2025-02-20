@@ -1,5 +1,6 @@
 var numberLength=4,maxDigit=10;
-///////////////////////////////////////////////////////
+let inputHistory = []; // Array to store user input history
+
 function generateNumber(){
     let tmpArray=[];
     for (;;){
@@ -15,21 +16,37 @@ function generateNumber(){
 }
 let randomNumber = generateNumber();
 console.log(randomNumber);
-///////////////////////////////////////////////////////
+
 function validateInput(){
-    var x=document.getElementById("input").value;
-    if (x.length !== numberLength){
+    var userNumber=document.getElementById("input").value;
+    if (userNumber.length!==numberLength){
         alert("Пожалуйста, введите ровно 4 различных цифры");
         return;
     } 
     else{
         for (let i=numberLength-2;i>=0;i--){
-            if((isNaN(parseInt(x[i])))||(x.includes(x[i],i+1))){
+            if((isNaN(parseInt(userNumber[i])))||(userNumber.includes(userNumber[i],i+1))){
                 alert("Пожалуйста, введите ровно 4 различных цифры");
                 return;
             }
         }
+    fillHistoryTable();    
     }
-    document.getElementById("demo").innerHTML=x;}
-///////////////////////////////////////////////////////
-function checkGuess(){}
+   //document.getElementById("demo").innerHTML=userNumber;
+
+}
+
+function fillHistoryTable(){
+    var input = document.getElementById("input").value;
+    var newRow = document.createElement("tr");
+    var newCell = document.createElement("td");
+    newCell.innerHTML = input;
+    newRow.append(newCell);
+    document.getElementById("rows").appendChild(newRow);
+    document.getElementById("input").value = '';
+}
+
+function valNum_fillTab(){
+    validateInput();
+}
+
