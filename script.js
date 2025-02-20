@@ -1,6 +1,5 @@
 var numberLength=4,maxDigit=10;
-let inputHistory = []; // Array to store user input history
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function generateNumber(){
     let tmpArray=[];
     for (;;){
@@ -16,26 +15,31 @@ function generateNumber(){
 }
 let randomNumber = generateNumber();
 console.log(randomNumber);
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function validateInput(){
-    var userNumber=document.getElementById("input").value;
-    if (userNumber.length!==numberLength){
+    var userNumbert=document.getElementById("input").value;
+    if (userNumbert.length!==numberLength){
         alert("Пожалуйста, введите ровно 4 различных цифры");
-        return;
+        input.value="";
+        return 0;
     } 
     else{
         for (let i=numberLength-2;i>=0;i--){
-            if((isNaN(parseInt(userNumber[i])))||(userNumber.includes(userNumber[i],i+1))){
+            if((isNaN(parseInt(userNumbert[i])))||(userNumbert.includes(userNumbert[i],i+1))){
                 alert("Пожалуйста, введите ровно 4 различных цифры");
-                return;
+                input.value="";
+                return 0;
             }
         }
-    fillHistoryTable();    
+       
     }
-   //document.getElementById("demo").innerHTML=userNumber;
-
+    //document.getElementById("demo").innerHTML=userNumber;
+    fillHistoryTable();
+    return userNumbert;
 }
-
+let userNumber=validateInput();
+console.log(userNumber);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function fillHistoryTable(){
     var input = document.getElementById("input").value;
     var newRow = document.createElement("tr");
@@ -45,8 +49,15 @@ function fillHistoryTable(){
     document.getElementById("rows").appendChild(newRow);
     document.getElementById("input").value = '';
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function valNum_fillTab(){
     validateInput();
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function defineAnimal(userNumber, randomNumber){
+    for (let i=0;i<numberLength;i++){
+        for(let j=0;j<numberLength;j++){
 
+        }
+    }    
+}
