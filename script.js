@@ -1,6 +1,7 @@
 var numberLength=4,maxDigit=10;
+///////////////////////////////////////////////////////
 function generateNumber(){
-    let tmpArray=[];//to store the generated number during its creation
+    let tmpArray=[];
     for (;;){
         if(tmpArray.length<numberLength){
             let numberDigit=Math.floor(Math.random()*10);
@@ -14,7 +15,7 @@ function generateNumber(){
 }
 let randomNumber = generateNumber();
 console.log(randomNumber);
-
+///////////////////////////////////////////////////////
 function validateInput(){
     var x=document.getElementById("input").value;
     if (x.length !== numberLength){
@@ -30,5 +31,5 @@ function validateInput(){
         }
     }
     document.getElementById("demo").innerHTML=x;}
-
-function validateNumber(){}
+///////////////////////////////////////////////////////
+function checkGuess(){}
