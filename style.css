@@ -1,64 +1,64 @@
-*{
-    font-size:1.8vw;
-    font-family: 'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif;
-    margin:0;
-    padding:0;
-    border:0;
+* {
+  font-size: 1.8vw;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-body{
-    text-align:center;
+body {
+  text-align: center;
 }
 
-#conteiner{
-    padding-top:5%;
+#conteiner {
+  padding-top: 5%;
 }
 
-#inputBlock{
-    margin:1.5%;
+#inputBlock {
+  margin: 1.5%;
 }
 
-#inputBlock input{
-    border:1px solid black;
-    width:20%;
+#inputBlock input {
+  border: 1px solid black;
+  width: 20%;
 }
 
-button{
-    text-align:center;
-    font-size:2vw;
-    border:1px solid black;
-    width:20%;
-    margin:0 0 5%;
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.5s, transform 0.1s;
-    
+button {
+  text-align: center;
+  font-size: 2vw;
+  border: 1px solid black;
+  width: 20%;
+  margin: 0 0 5%;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.1s;
 }
 
 button:hover {
-    background-color: #cacaca;
-    transform: scale(1.05);
+  background-color: #cacaca;
+  transform: scale(1.05);
 }
 
 button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
-table{
-    margin:auto;
-    border-collapse:collapse;
-    width:60%;
+table {
+  margin: auto;
+  border-collapse: collapse;
+  width: 60%;
 }
 
-input[type=number]{
-    -moz-appearance:textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button{
-    -webkit-appearance:none;
-    margin:0;
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
