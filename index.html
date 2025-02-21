@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html lang="ru"xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Быки и Коровы</title>
-        <link rel="stylesheet"
-            href="style.css"
-            type="text/css">
-            <script src="script.js"></script>
-    </head>
-    <body>
-        <div id="conteiner">
-            <div id="title">
-                <h1>Игра "Быки &#128002; и Коровы &#128004;"</h1>
-                <h2>Введите четыре различные цифры (0 может стоять на первом месте):</h2>
-            </div>
-            <div id="inputBlock">
-                <input type="text" 
-                    id="input"
-                    onfocus="this.value=''"
-                    maxlength="4"
-                    p="[0-9]{4}" 
-                    value=""/> 
-            </div>
-            <button id="button"
-                onclick="valNum_fillTab()">Угадать число
-            </button>
-            <table id="historyTable">
-                <thead>
-                    <tr>
-                        <th>Попытка</th>
-                        <th>Ваше число</th>
-                        <th>Быки</th>
-                        <th>Коровы</th>
-                    </tr>
-                </thead>
-                <tbody id="rows"></tbody>
-            </table>
-        </div>
-        <p id="demo"></p>
-    </body>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Быки и Коровы</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="conteiner">
+      <div id="title">
+        <h1>Игра "Быки &#128002; и Коровы &#128004;"</h1>
+        <h2>
+          Введите четыре различные цифры (0 может стоять на первом месте):
+        </h2>
+      </div>
+      <div id="inputBlock">
+        <input
+          type="text"
+          id="input"
+          onfocus="this.value=''"
+          maxlength="4"
+          p="[0-9]{4}"
+          value=""
+        />
+      </div>
+      <button id="button" onclick="valNum_fillTab()">Угадать число</button>
+      <table id="historyTable">
+        <thead>
+          <tr>
+            <th>Попытка</th>
+            <th>Ваше число</th>
+            <th>Быки</th>
+            <th>Коровы</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p id="demo"></p>
+  </body>
 </html>
